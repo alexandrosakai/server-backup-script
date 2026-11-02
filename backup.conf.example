@@ -1,0 +1,20 @@
+# Copie para /etc/server-backup/backup.conf (modo 600) e ajuste.
+BACKUP_DIR="/var/backups/server-backup"
+RETENTION_DAYS=7
+
+# Bancos (deixe vazio o que não usar)
+MYSQL_DATABASES=("app_db")
+MYSQL_DEFAULTS_FILE="/etc/server-backup/mysql.cnf"   # [client] user=... password=... (modo 600)
+POSTGRES_DATABASES=()
+SQLITE_FILES=("/var/lib/app/app.db")
+
+# Diretórios e arquivos a incluir (caminhos absolutos)
+DIRECTORIES=("/opt/app" "/etc/nginx")
+EXCLUDES=("venv" "node_modules" "__pycache__")
+
+# Cópia remota opcional (requer rclone configurado). Ex.: "meuremoto:backups"
+RCLONE_REMOTE=""
+RCLONE_RETENTION_DAYS=30
+
+# Comando executado em caso de falha (recebe BACKUP_MESSAGE). Ex.: curl para um webhook
+NOTIFY_COMMAND=""

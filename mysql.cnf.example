@@ -1,0 +1,4 @@
+# Credenciais do MariaDB/MySQL para o backup (modo 600)
+[client]
+user=backup
+password=

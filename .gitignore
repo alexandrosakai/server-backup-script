@@ -1,0 +1,7 @@
+.env
+*.conf
+!backup.conf.example
+mysql.cnf
+*.log
+*.tgz
+*.gz
